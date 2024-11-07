@@ -29,7 +29,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 1600px; /* Zmniejszona maksymalna szerokość */
+            max-width: 1600px;
             margin: auto;
         }
 
@@ -51,11 +51,12 @@
         }
 
         .hero {
-            background: linear-gradient(to right, #00796b, #004d40);
+            background: url('https://raw.githubusercontent.com/twojanazwa/twojerepozytorium/main/tło.png') no-repeat center center;
+            background-size: cover;
             color: #fff;
             padding: 3rem 1rem;
             text-align: center;
-            max-width: 1600px; /* Zmniejszona maksymalna szerokość */
+            max-width: 1600px;
             margin: auto;
         }
 
@@ -91,7 +92,7 @@
             justify-content: center;
             background-color: #004d40;
             padding: 1rem 0;
-            max-width: 1600px; /* Zmniejszona maksymalna szerokość */
+            max-width: 1600px;
             margin: auto;
         }
 
@@ -111,7 +112,7 @@
         /* Główna zawartość */
         .container {
             width: 75%;
-            max-width: 1600px; /* Zmniejszona maksymalna szerokość */
+            max-width: 1600px;
             margin: 2rem auto;
             padding: 2rem;
             background-color: #ffffff;
@@ -131,9 +132,15 @@
             padding-bottom: 0.5rem;
         }
 
+        /* Styl dla sekcji usług z obrazem */
+        .services-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
         .services ul {
-            list-style: none;
-            padding: 0;
+            flex: 1;
         }
 
         .services ul li {
@@ -141,6 +148,14 @@
             padding: 0.8rem 0;
             border-bottom: 1px solid #ddd;
             color: #555;
+        }
+
+        .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
         }
 
         .about p {
@@ -173,7 +188,7 @@
             text-align: center;
             padding: 1.5rem 0;
             font-size: 0.9rem;
-            max-width: 1600px; /* Zmniejszona maksymalna szerokość */
+            max-width: 1600px;
             margin: auto;
         }
 
@@ -189,6 +204,11 @@
 
             .container {
                 width: 90%;
+            }
+
+            .services-content {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -216,13 +236,18 @@
 <div class="container">
     <section id="services" class="services">
         <h2>Nasze Usługi</h2>
-        <ul>
-            <li>Dyrektor Finansowy na godziny</li>
-            <li>Budżetowanie i prognozowanie finansowe</li>
-            <li>Analiza kosztów i rentowności</li>
-            <li>Monitoring przepływów pieniężnych</li>
-            <li>Planowanie strategiczne i optymalizacja procesów</li>
-        </ul>
+        <div class="services-content">
+            <ul>
+                <li>Dyrektor Finansowy na godziny</li>
+                <li>Budżetowanie i prognozowanie finansowe</li>
+                <li>Analiza kosztów i rentowności</li>
+                <li>Monitoring przepływów pieniężnych</li>
+                <li>Planowanie strategiczne i optymalizacja procesów</li>
+            </ul>
+            <div class="service-image">
+                <img src="https://raw.githubusercontent.com/sempre92/LISS/refs/heads/main/t%C5%82o.webp" alt="Obraz usług finansowych">
+            </div>
+        </div>
     </section>
 
     <section id="about" class="about">
