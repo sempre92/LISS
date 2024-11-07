@@ -54,7 +54,8 @@
             background: 
                 <div class="service-image">
                     <img src="https://raw.githubusercontent.com/sempre92/LISS/refs/heads/main/obrazTest_converted.webp" alt="Obraz usług finansowych">
-                </div> no-repeat center center;
+            </div>
+            no-repeat center center;
             background-size: cover;
             color: #fff;
             padding: 3rem 1rem;
@@ -138,7 +139,7 @@
         /* Styl dla sekcji usług z obrazem */
         .services-content {
             display: flex;
-            align-items: flex-start;
+            align-items: stretch; /* Rozciągnij elementy do pełnej wysokości */
             gap: 2rem;
         }
 
@@ -153,12 +154,17 @@
             color: #555;
         }
 
+        .service-image {
+            flex: 1;
+            height: 100%; /* Ustaw pełną wysokość dla kontenera obrazu */
+        }
+
         .service-image img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%; /* Dopasowanie obrazu do wysokości kontenera */
+            object-fit: cover; /* Zachowaj proporcje i wypełnij cały kontener */
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
         }
 
         .about p {
