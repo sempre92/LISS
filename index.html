@@ -135,7 +135,7 @@
         /* Styl dla sekcji usług z obrazem */
         .services-content {
             display: flex;
-            align-items: flex-start; /* Ustaw elementy na początku */
+            align-items: flex-start; /* Nie rozciągaj kontenerów automatycznie */
             gap: 2rem;
         }
 
@@ -157,8 +157,7 @@
         .service-image img {
             width: 100%;
             height: auto; /* Dopasowanie do zawartości listy */
-            max-height: 100%; /* Maksymalna wysokość */
-            object-fit: cover; /* Dopasowanie obrazu */
+            object-fit: cover; /* Zachowaj proporcje i wypełnij kontener */
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
