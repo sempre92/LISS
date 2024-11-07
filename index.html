@@ -133,29 +133,35 @@
         }
 
         /* Styl dla sekcji usług z obrazem */
-       .services-content {
-    display: flex;
-    align-items: flex-start; /* Ustawienia bez automatycznego rozciągania */
-    gap: 2rem;
-}
+        .services-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
 
-.services ul {
-    flex: 1;
-}
+        .services ul {
+            flex: 1;
+        }
 
-.service-image {
-    flex: 1;
-}
+        .services ul li {
+            font-size: 1.1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ddd;
+            color: #555;
+        }
 
-.service-image img {
-    width: 100%;
-    height: auto; /* Dopasowanie do zawartości */
-    max-height: 100%; /* Opcjonalnie, maksymalna wysokość */
-    object-fit: cover; /* Zachowaj proporcje i wypełnij kontener */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .service-image {
+            flex: 1;
+            height: 80%; /* Ustaw 80% wysokości, aby obraz kończył się na poziomie przedostatniego elementu */
+        }
 
+        .service-image img {
+            width: 100%;
+            height: 100%; /* Dopasowanie obrazu do wysokości kontenera */
+            object-fit: cover; /* Zachowaj proporcje i wypełnij cały kontener */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
         .about p {
             font-size: 1.1rem;
